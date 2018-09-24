@@ -62,6 +62,7 @@ def all_supplies_in_holidays(holiday_hash)
       v.each {|x| print "#{x} "}
     end
   end
+  binding.pry
 end
 
 def all_holidays_with_bbq(holiday_hash)
