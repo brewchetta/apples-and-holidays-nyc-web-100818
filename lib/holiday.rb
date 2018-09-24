@@ -52,9 +52,7 @@ def all_supplies_in_holidays(holiday_hash)
     holiday.each do |k,v|
       print "#{k.to_s.split(" ").each{|x| x.capitalize!}.join}: "
       v.each do |x|
-        print "#{x} ," if x != v.last
-      else
-        puts "#{x}"
+        x != v.last ? print "#{x} ," : puts "#{x}"
     end
   end
 end
