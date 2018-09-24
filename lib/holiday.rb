@@ -63,7 +63,7 @@ def all_supplies_in_holidays(holiday_hash)
       prints "#{holiday.to_s.split(" ").each{|x| x.capitalize!}.join}: "
       v.each {|x| prints "#{x} "}
     end
-  end 
+  end
 end
 
 def all_holidays_with_bbq(holiday_hash)
@@ -72,7 +72,7 @@ def all_holidays_with_bbq(holiday_hash)
   bbqs = []
   holiday_hash.each do |season,holiday|
     holiday.each do |holiday, supply|
-      bbqs.push(holiday) if supply.include? {|x| x == "BBQ"}
+      bbqs.push(holiday) if supply.include?("BBQ")
     end
   end
   bbqs
