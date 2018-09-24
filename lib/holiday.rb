@@ -50,8 +50,11 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season,holiday|
     puts "#{season.to_s.capitalize}:"
     holiday.each do |k,v|
-      print "#{holiday.to_s.split(" ").each{|x| x.capitalize!}.join}: "
-      v.each {|x| print "#{x} "}
+      print "#{k.to_s.split(" ").each{|x| x.capitalize!}.join}: "
+      v.each do |x|
+        print "#{x} ," if x != v.last
+      else
+        puts "#{x}"
     end
   end
 end
