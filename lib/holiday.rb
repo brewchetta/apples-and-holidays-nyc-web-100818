@@ -61,8 +61,9 @@ def all_supplies_in_holidays(holiday_hash)
       v.each {|x| print "#{x} "}
     end
   end
-  binding.pry
 end
+
+binding.pry
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
